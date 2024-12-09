@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content %}
+
+<H2>Add Movie here</H2>
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+<div class="row g-3 align-items-center">
+    <div class="col-auto">
+      <label  class="col-form-label">Title</label>
+    </div>
+    <div class="col-auto">
+      <input type="text"  class="form-control" placeholder="Title" name="t">
+    </div>
+</div>
+    <br>
+<div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <label  class="col-form-label">Description   </label>
+        </div>
+        <div class="col-auto">
+          <input type="text"  class="form-control" placeholder="Description" name="d">
+        </div>
+</div>
+        <br>
+<div class="row g-3 align-items-center">
+            <div class="col-auto">
+              <label  class="col-form-label">Language    </label>
+            </div>
+            <div class="col-auto">
+              <input type="text"  class="form-control" placeholder="Language" name="l">
+            </div>
+</div>
+            <br>
+<div class="row g-3 align-items-center">
+    <div class="col-auto">
+        <label  class="col-form-label">Year    </label>
+    </div>
+    <div class="col-auto">
+        <input type="number"  class="form-control" placeholder="Year" name="y">
+    </div>
+</div>
+     <br>
+<div class="row g-3 align-items-center">
+    <div class="col-auto">
+          <label  class="col-form-label">Image    </label>
+    </div>
+    <div class="col-auto">
+          <input type="file"  class="form-control" placeholder="Image" name="i">
+    </div>
+</div>
+        <br>
+        <button type="submit" class="btn btn-primary">AddMovie</button>
+</form>
+{% endblock %}   
